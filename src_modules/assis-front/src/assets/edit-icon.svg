@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 25</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页---双侧栏展开" transform="translate(-249.000000, -112.000000)">
+            <g id="编组-13" transform="translate(192.000000, 23.000000)">
+                <g id="编组-6" transform="translate(33.000000, 85.000000)">
+                    <g id="编组-25" transform="translate(24.000000, 4.000000)">
+                        <path d="M11.8218441,4.39205976 C12.4266502,4.99686583 12.4266502,5.97745021 11.8218441,6.58225627 L5.96673328,12.4373671 C5.4817746,12.9223258 4.82004464,13.1885819 4.134351,13.1746511 L4.02103648,13.172349 C3.48466229,13.1614519 3.05245199,12.7292416 3.04155487,12.1928674 L3.03925274,12.0795529 C3.025322,11.3938592 3.29157809,10.7321293 3.77653676,10.2471706 L9.63164759,4.39205976 C10.2364537,3.78725369 11.217038,3.78725369 11.8218441,4.39205976 Z" id="矩形" fill="#B5B8BF"></path>
+                        <line x1="9.0564048" y1="3.0348673" x2="6.85896589" y2="5.21782143" id="直线-4" stroke="#B5B8BF" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <rect id="矩形备份-7" stroke="#979797" opacity="0" x="0" y="0" width="16" height="16"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

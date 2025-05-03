@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "assis-general": [
+        "./src_modules/assis-general/src/index.ts"
+      ],
+      "assis-vscode": [
+        "./src_modules/assis-vscode/src/index.ts"
+      ],
+      "assistant-ai": [
+        "./src/index.ts"
+      ]
+    }
+  }
+}

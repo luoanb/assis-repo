@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>加载 (1)备份</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页---对话模式---用户直接发起对话" transform="translate(-1090.000000, -403.000000)">
+            <g id="编组-9" transform="translate(305.000000, 114.000000)">
+                <g id="编组-28" transform="translate(785.000000, 289.000000)">
+                    <rect id="矩形" stroke="#B5B8BF" stroke-width="2" fill="#E7EEF600" x="5" y="5" width="10.7692308" height="9.75" rx="2"></rect>
+                    <rect id="矩形备份-5" stroke="#B5B8BF" stroke-width="2" fill="#E7EEF600" x="8.23076923" y="8.25" width="10.7692308" height="9.75" rx="2"></rect>
+                    <rect id="矩形" fill="#D8D8D8" opacity="0" x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

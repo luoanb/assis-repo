@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>位图</title>
+    <defs>
+        <circle id="path-1" cx="19.5" cy="19.5" r="19.5"></circle>
+        <path d="M6.05,10.3461193 C9.39132274,10.3461193 12.1,8.0300616 12.1,5.17305965 C12.1,2.31605769 9.39132274,0 6.05,0 C2.70867726,0 0,2.31605769 0,5.17305965 C0,6.68246091 0.756041452,8.04087472 1.96198687,8.98653786 C2.0361687,9.04470883 2.02676264,9.48858709 1.87829175,9.81305381 C1.63455868,10.3457055 1.1963559,10.8504664 1.47222825,10.9738198 C1.70150773,11.0763397 2.25490866,10.8654486 2.68430149,10.5558936 C3.08628046,10.2661017 3.36888371,9.87759757 3.47950297,9.92721489 C4.31830953,10.3034544 5.03707493,10.3461193 6.05,10.3461193 Z" id="path-3"></path>
+        <filter x="-37.5%" y="-75.0%" width="175.0%" height="250.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <path d="M7.7,13.1677882 C11.9525926,13.1677882 15.4,10.2200784 15.4,6.58389409 C15.4,2.94770979 11.9525926,0 7.7,0 C3.44740743,0 0,2.94770979 0,6.58389409 C0,8.50495025 0.962234576,10.2338406 2.49707419,11.4374118 C2.59148743,11.5114476 2.57951608,12.0763836 2.39055314,12.4893412 C2.08034741,13.1672616 1.52263478,13.8096846 1.87374505,13.9666798 C2.1655553,14.0971596 2.86988375,13.8287527 3.41638371,13.4347737 C3.92799331,13.0659476 4.28767017,12.5714878 4.42845833,12.6346371 C5.49603032,13.1134874 6.41082264,13.1677882 7.7,13.1677882 Z" id="path-6"></path>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页---对话模式---新用户欢迎首次" transform="translate(-246.000000, -186.000000)">
+            <g id="位图" transform="translate(225.000000, 169.000000)">
+                <g transform="translate(21.000000, 17.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="蒙版" fill="#FFFFFF" xlink:href="#path-1"></use>
+                    <g id="椭圆形备份" mask="url(#mask-2)">
+                        <g transform="translate(18.900000, 18.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="蒙版" stroke="none" fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                            <ellipse id="椭圆形" stroke="none" fill="#6680FF" fill-rule="evenodd" opacity="0.482626272" filter="url(#filter-5)" mask="url(#mask-4)" cx="5.1" cy="7" rx="8" ry="4"></ellipse>
+                        </g>
+                    </g>
+                    <g id="椭圆形备份-2" mask="url(#mask-2)">
+                        <g transform="translate(10.000000, 12.000000)">
+                            <mask id="mask-7" fill="white">
+                                <use xlink:href="#path-6"></use>
+                            </mask>
+                            <use id="蒙版" stroke="none" fill="#2242DF" fill-rule="evenodd" xlink:href="#path-6"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

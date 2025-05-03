@@ -1,0 +1,57 @@
+.header {
+    height: 62px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 38px 0 20px;
+    align-items: center;
+    .left-select {
+      display: flex;
+      .left-select-icon {
+        width: 20px;
+        height: 13px;
+        background-color: red;
+      }
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #d9deeb;
+      margin: 0 27px 0 44px;
+    }
+
+    .setup-my {
+      width: 136px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      .avatar {
+        height: 26px;
+        width: 26px;
+        border-radius: 13px;
+        background-color: blue;
+      }
+
+      .nickname {
+        height: 26px;
+        max-width: 70px;
+        font-weight: 400;
+        font-size: 14px;
+        color: #212423;
+        font-style: normal;
+        line-height: 26px;
+        margin: 0 3px 0 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .more-icon {
+        width: 10px;
+        height: 4px;
+        background: blue;
+      }
+    }
+  }

@@ -1,0 +1,72 @@
+{
+  "propmts": [
+    {
+      "desc": "所有的开始",
+      "msgsContent": [],
+      "content": "请根据以下选项中判断**输入内容**最符合的选项，并返回该选项的序号：\n##选项：**\n {{0}}\n\n##输入内容：\n {{1}} \n**输出要求：**\n返回最符合的选项序号，例如“1”。",
+      "id": "0",
+      "parentId": null,
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": false,
+      "doImmediately": true
+    },
+    {
+      "desc": "这是一个用户表达的执行任务的诉求",
+      "msgsContent": [],
+      "content": "你将扮演一个样样精通的事务助手, 根据用户的需求, 列出完成任务所必须的前置条件, 具体的操作步骤",
+      "id": "1",
+      "parentId": "0",
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": false
+    },
+    {
+      "desc": "这是一个用户的提问或者探讨, 需要解释说明或者表述",
+      "msgsContent": [],
+      "content": "你将扮演一个大学教授, 根据用户的提问, 详细的回答用户的问题, 并讨论相关领域和背景",
+      "id": "2",
+      "parentId": "0",
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": false
+    },
+    {
+      "desc": "",
+      "msgsContent": [],
+      "content": "请根据以下选项中判断**输入内容**最符合的选项，并返回该选项的序号：\n##选项：**\n {{0}}\n\n##输入内容：\n {{1}} \n**输出要求：**\n返回最符合的选项序号，例如“1”。",
+      "id": "3",
+      "parentId": "1",
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": true,
+      "doImmediately": true
+    },
+    {
+      "desc": "这是一个使用计算机可执行的任务",
+      "msgsContent": [],
+      "content": "#角色设定\n作为一个数据归档助手，你的任务是后续所有的记录整理成结构化的数据。\n\n#要求与限制\n1.一步一步的思考数据的结构, 包括具体的字段\n2.输出结果的格式为JSON格式\n\n",
+      "id": "4",
+      "parentId": "3",
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": true
+    },
+    {
+      "desc": "这不是一个可以使用计算机执行的任务",
+      "msgsContent": [],
+      "content": "推荐一个你认为合适的角色来处理当前任务, 并把任务相关信息整理介绍给他",
+      "id": "5",
+      "parentId": "3",
+      "exportHistory": true,
+      "inheritHistory": true,
+      "toComputer": true,
+      "exec": true
+    }
+  ]
+}

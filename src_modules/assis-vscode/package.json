@@ -1,0 +1,24 @@
+{
+  "name": "assis-vscode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.ts",
+  "srcModule": {
+    "isRoot": true,
+    "buildType": false,
+    "dist": {
+      ".": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "epm-repo": "^0.0.5",
+    "assis-general": "./src_modules/assis-general",
+    "typescript": "^5.8.2"
+  }
+}

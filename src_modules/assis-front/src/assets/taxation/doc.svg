@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 29</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="主页---双侧栏展开" transform="translate(-24.000000, -227.000000)">
+            <g id="编组" transform="translate(9.000000, 56.000000)">
+                <g id="编组-9备份" transform="translate(15.000000, 169.000000)">
+                    <g id="编组-29" transform="translate(0.000000, 2.000000)">
+                        <rect id="矩形" fill="#2242DF" x="0" y="0" width="14" height="14" rx="3"></rect>
+                        <line x1="4.5" y1="4.5" x2="9.5" y2="4.5" id="直线-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="4.5" y1="7.5" x2="9.5" y2="7.5" id="直线-2备份" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="4.5" y1="10.5" x2="7.5" y2="10.5" id="直线-2备份-2" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

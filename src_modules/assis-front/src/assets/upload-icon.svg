@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>上传 (1)</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="主页---双侧栏展开" transform="translate(-496.000000, -645.000000)" stroke="#232426" stroke-width="2">
+            <g id="编组-16" transform="translate(430.000000, 623.000000)">
+                <g id="编组-6备份-2" transform="translate(52.000000, 15.000000)">
+                    <g id="编组-28" transform="translate(15.000000, 8.539388)">
+                        <line x1="6" y1="0.460611997" x2="6" y2="9.460612" id="直线-10"></line>
+                        <path d="M12,9.460612 L12,10.460612 C12,11.5651815 11.1045695,12.460612 10,12.460612 L2,12.460612 C0.8954305,12.460612 1.3527075e-16,11.5651815 0,10.460612 L0,9.49994278 L0,9.49994278" id="矩形"></path>
+                        <polyline id="路径-2" points="1.73213865 4.0158175 6.03311072 0 10.2853362 4.0158175"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

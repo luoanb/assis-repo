@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "name": "思想",
+      "key": "%E6%80%9D%E6%83%B3@",
+      "parent": "道",
+      "children": [
+        "关系",
+        "概念"
+      ]
+    },
+    {
+      "name": "关系",
+      "key": "%E5%85%B3%E7%B3%BB@",
+      "parent": "思想",
+      "children": []
+    },
+    {
+      "name": "概念",
+      "key": "%E6%A6%82%E5%BF%B5@",
+      "parent": "思想",
+      "children": []
+    }
+  ]
+}
