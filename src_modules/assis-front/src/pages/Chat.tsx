@@ -4,21 +4,26 @@ import { CloseOutlined, DeleteOutlined, RightOutlined, SendOutlined } from '@ant
 import {
   Button,
   Card,
-  Chip,
+  Tag as Chip,
   Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  ScrollShadow,
-  Textarea,
+  // Button,
+  // DropdownMenu,
+  // DropdownTrigger,
+  Input,
   Tooltip
-} from '@nextui-org/react'
-import { useEffect, useRef, useState } from 'react'
+} from 'antd'
+import { PropsWithChildren, useEffect, useRef, useState } from 'react'
 import * as front from '@/utils/vscodeFrontend'
 import { MdPreview } from '@/components/MdView'
 import { WorkStation, dashStore } from '@/store'
 import { socket } from '@/socket'
 import { useSnapshot } from 'valtio'
+
+const { TextArea } = Input
+
+const ScrollShadow = ({ children, ...props }: PropsWithChildren<React.AllHTMLAttributes<HTMLDivElement>>) => {
+  return <div {...props}>{children}</div>
+}
 
 /**
  * 消息体
@@ -199,7 +204,7 @@ export default function Chat() {
         {workSnap.workStation?.path ? (
           <div className="flex justify-between items-center mb-2 p-2 pl-4  rounded-2xl">
             <p>文件地址: {workSnap.workStation?.path}</p>
-            <Tooltip disableAnimation content="分析一下本页的代码">
+            <Tooltip title="分析一下本页的代码">
               <Button color="primary" onClick={() => send({ isFile: true })}>
                 分析一下
               </Button>
@@ -267,7 +272,7 @@ export default function Chat() {
                   {isUseSelect() ? (
                     <div className="flex items-center justify-between mb-2">
                       <Tooltip
-                        content={
+                        title={
                           <ScrollShadow className="mb-2 py-2 max-h-[18.75rem] overflow-auto max-w-[37.5rem]">
                             <MdPreview
                               theme="dark"
@@ -277,7 +282,7 @@ export default function Chat() {
                           </ScrollShadow>
                         }
                       >
-                        <Chip color="success" size="sm" className="mr-2">
+                        <Chip color="success" className="mr-2">
                           选区
                         </Chip>
                       </Tooltip>
@@ -293,24 +298,21 @@ export default function Chat() {
                   ) : (
                     <div>
                       <Tooltip
-                        disableAnimation
-                        content="获取当前文件的所有文本, 进关注部分可以在工作区手动选择内容"
-                        placement="top-start"
+                        title="获取当前文件的所有文本, 进关注部分可以在工作区手动选择内容"
+                        placement="leftTop"
                       >
-                        <Chip color="primary" className="mr-2 " size="sm">
+                        <Chip color="primary" className="mr-2 " >
                           全文
                         </Chip>
                       </Tooltip>
                     </div>
                   )}
                   <Tooltip
-                    disableAnimation
-                    content="检测和修复选中区域的代码"
-                    placement="top-start"
+                    title="检测和修复选中区域的代码"
+                    placement="leftTop"
                   >
                     <Button
-                      size="sm"
-                      variant="bordered"
+                      size="small"
                       aria-label="Like"
                       className="mr-2"
                       onClick={() => {
@@ -325,8 +327,7 @@ export default function Chat() {
                     </Button>
                   </Tooltip>
                   <Button
-                    size="sm"
-                    variant="bordered"
+                    size="small"
                     aria-label="Like"
                     className="mr-2"
                     onClick={() => {
@@ -343,86 +344,88 @@ export default function Chat() {
                   >
                     生成注释
                   </Button>
-                  <Dropdown>
-                    <DropdownTrigger>
-                      <Button variant="bordered" size="sm" endContent={<RightOutlined />}>
-                        MD文档助手
-                      </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu aria-label="Static Actions">
-                      <DropdownItem
-                        key="1"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请你根据文本的情景优化一下内容(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        优化内容
-                      </DropdownItem>
-                      <DropdownItem
-                        key="0"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请把内容翻译为中文(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        翻译为中文
-                      </DropdownItem>
-                      <DropdownItem
-                        key="2"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请把内容翻译为英语(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        翻译为英语
-                      </DropdownItem>
-                      <DropdownItem
-                        key="3"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请把内容翻译为俄语(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        翻译为俄语
-                      </DropdownItem>
-                      <DropdownItem
-                        key="4"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请把内容翻译为法语(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        翻译为法语
-                      </DropdownItem>
-                      <DropdownItem
-                        key="5"
-                        onClick={() => {
-                          send({
-                            value:
-                              getSelectContext() +
-                              '\n 这里有一段markdown文本,请把内容翻译为日语(直接返回结果,不要进行其他的解析和解释)'
-                          })
-                        }}
-                      >
-                        翻译为日语
-                      </DropdownItem>
-                    </DropdownMenu>
+                  <Dropdown
+                    menu={{
+                      items: [
+                        <Button
+                          key="1"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请你根据文本的情景优化一下内容(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          优化内容
+                        </Button>,
+                        <Button
+                          key="0"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请把内容翻译为中文(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          翻译为中文
+                        </Button>,
+                        <Button
+                          key="2"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请把内容翻译为英语(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          翻译为英语
+                        </Button>,
+                        <Button
+                          key="3"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请把内容翻译为俄语(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          翻译为俄语
+                        </Button>,
+                        <Button
+                          key="4"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请把内容翻译为法语(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          翻译为法语
+                        </Button>,
+                        <Button
+                          key="5"
+                          onClick={() => {
+                            send({
+                              value:
+                                getSelectContext() +
+                                '\n 这里有一段markdown文本,请把内容翻译为日语(直接返回结果,不要进行其他的解析和解释)'
+                            })
+                          }}
+                        >
+                          翻译为日语
+                        </Button>
+                      ].map((d, index) => ({ key: index, label: d }))
+                    }}
+                  >
+                    <Button size="small" icon={<RightOutlined />}>
+                      MD文档助手
+                    </Button>
+
                   </Dropdown>
                 </div>
               </div>
@@ -438,10 +441,9 @@ export default function Chat() {
                 待确认事项
               </Button>
             </Tooltip> */}
-              <Tooltip disableAnimation content="让我们忘记过去，重新开始吧" placement="top-start">
+              <Tooltip title="让我们忘记过去，重新开始吧" placement="topLeft">
                 <Button
                   onClick={removelist}
-                  isIconOnly
                   color="danger"
                   aria-label="Like"
                   className="mr-2"
@@ -449,32 +451,29 @@ export default function Chat() {
                   <DeleteOutlined />
                 </Button>
               </Tooltip>
-              <Textarea
-                startContent={
-                  isUseSelect() ? (
-                    <div className="flex items-center rounded-xl p-0 border border-gray-600">
-                      <span className="max-w-12 truncate text-gray-400 text-xs pl-1">
-                        {workSnap.workStation?.select?.context}
-                      </span>
-                      <Button
-                        isIconOnly
-                        size="sm"
-                        className="scale-75 border-gray-400"
-                        radius="full"
-                        variant="bordered"
-                        onClick={() => setWorkStation({ ...workSnap.workStation, isUse: false })}
-                      >
-                        <CloseOutlined />
-                      </Button>
-                    </div>
-                  ) : null
-                }
-                isDisabled={isLoding}
+              <TextArea
+                // prefix={
+                //   isUseSelect() ? (
+                //     <div className="flex items-center rounded-xl p-0 border border-gray-600">
+                //       <span className="max-w-12 truncate text-gray-400 text-xs pl-1">
+                //         {workSnap.workStation?.select?.context}
+                //       </span>
+                //       <Button
+                //         size="small"
+                //         className="scale-75 border-gray-400"
+                //         onClick={() => setWorkStation({ ...workSnap.workStation, isUse: false })}
+                //       >
+                //         <CloseOutlined />
+                //       </Button>
+                //     </div>
+                //   ) : null
+                // }
+                disabled={isLoding}
                 placeholder="有什么需要我帮助的吗 (ctrl + enter 发送)"
                 className="mr-2"
                 value={input}
+                rows={2}
                 onChange={(e) => setInput(e.target.value)}
-                minRows={1}
                 onKeyDown={(e) => {
                   if (e.key == 'Enter' && e.ctrlKey) {
                     send({
@@ -482,10 +481,10 @@ export default function Chat() {
                     })
                   }
                 }}
-              ></Textarea>
-              <Tooltip disableAnimation content="ctrl + enter 发送" placement="top-start">
+              ></TextArea>
+              <Tooltip title="ctrl + enter 发送" placement="leftTop">
                 <Button
-                  startContent={<SendOutlined />}
+                  icon={<SendOutlined />}
                   onClick={() =>
                     send({
                       value: getSelectContext({ fullWord: false }) + '\n ' + input

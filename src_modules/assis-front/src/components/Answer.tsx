@@ -1,11 +1,11 @@
-import { Button, Spinner, Tooltip } from '@nextui-org/react'
+import { Button, Spin as Spinner, Tooltip } from 'antd'
 // import copy from '@/assets/taxation/copy.svg'
 // import zan from '@/assets/taxation/zan.svg'
 // import zanA from '@/assets/taxation/zan-active.svg'
 // import cai from '@/assets/taxation/cai.svg'
 // import caiA from '@/assets/taxation/cai-active.svg'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import utils from '@/utils/utils'
 // import { MdPreview } from 'md-editor-rt'
 // import 'md-editor-rt/lib/preview.css'
@@ -13,8 +13,8 @@ import { antdApp } from '@/utils/antdApp'
 import {
   CopyFilled,
   // CopyOutlined,
-  FrownOutlined,
-  SmileFilled
+  // FrownOutlined,
+  // SmileFilled
   // SmileOutlined,
   // SwitcherOutlined
 } from '@ant-design/icons'
@@ -115,25 +115,19 @@ export default function Answer({
         {status == IStatus.loading ? (
           <div className="text-jh-link flex  rounded-sm bg-gray-900 rounded-b-xl rounded-r-xl p-3 text-small">
             <Spinner
-              size="sm"
+              size="small"
               className="mr-2 border-jh-link"
-              classNames={{
-                circle1: 'border-b-jh-link',
-                circle2: 'border-b-jh-link'
-              }}
             />
             {loadingMsg}
           </div>
         ) : null}
 
         <div className="flex justify-end items-center hover-show absolute right-2 bottom-2">
-          <Tooltip content="复制完整内容">
+          <Tooltip title="复制完整内容">
             <Button
               color="primary"
-              isIconOnly
-              variant="faded"
               aria-label="Like"
-              size="sm"
+              size="small"
               onClick={() => {
                 utils.copyText(context as string)
                 antdApp.value?.message.info('复制成功')

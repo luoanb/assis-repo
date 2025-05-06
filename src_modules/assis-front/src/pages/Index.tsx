@@ -1,8 +1,5 @@
 import { DragDrawer } from '@/components/DragDrawer'
-import { TaskDetail } from '@/components/TaskDetail'
-import { antdApp } from '@/utils/antdApp'
-import { CaretRightOutlined } from '@ant-design/icons'
-import { Button, Input, Popover, PopoverContent, PopoverTrigger, Tooltip } from '@nextui-org/react'
+import { Button, Input, Popover, Tooltip } from 'antd'
 import { request } from '@/utils/vscodeFrontend'
 import { useEffect, useState } from 'react'
 
@@ -95,7 +92,7 @@ export default function Index() {
       <DragDrawer
         outSideContent={
           <div className="h-full w-full flex justify-center items-center">
-            <Tooltip placement="top" content="告诉我你的需求, 当然说得尽量明确一些, 剩下的交给我">
+            <Tooltip placement="top" title="告诉我你的需求, 当然说得尽量明确一些, 剩下的交给我">
               <div>
                 <Input
                   className="mb-2 w-[25rem]"
@@ -103,7 +100,7 @@ export default function Index() {
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="需要为你做点什么, 比如: 新建一个Vue项目"
                 ></Input>
-                <Button onClick={onStart} color="primary" startContent={<MagicIcon />}>
+                <Button onClick={onStart} color="primary" icon={<MagicIcon />}>
                   魔法开始
                 </Button>
               </div>
@@ -130,7 +127,6 @@ export default function Index() {
           </div>
         </div>
       </DragDrawer>
-      <TaskDetail taskInfo={currentTask} isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   )
 }

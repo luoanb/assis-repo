@@ -2,7 +2,7 @@ import { useEffect, useCallback, useState } from 'react'
 import Tree from 'react-d3-tree'
 import * as front from '@/utils/vscodeFrontend'
 import * as d3 from 'd3'
-import { Tooltip, Card, CardHeader, CardBody, Button } from '@nextui-org/react'
+import { Tooltip, Button } from 'antd'
 
 const useCenteredTree = (defaultTranslate = { x: 0, y: 0 }) => {
   const [translate, setTranslate] = useState(defaultTranslate)
@@ -109,14 +109,14 @@ const renderForeignObjectNode = ({ nodeDatum, toggleNode, foreignObjectProps }: 
       <foreignObject {...foreignObjectProps}>
         <div className="flex">
           <Tooltip
-            content={
+            title={
               <div>
                 <div className="pb-0 pt-2 px-4 flex items-start">
                   <h4 className="font-bold text-large flex-1">{nodeDatum.id}</h4>
-                  <Button isIconOnly size="sm" className="ml-2">
+                  <Button size="small" className="ml-2">
                     编辑
                   </Button>
-                  <Button isIconOnly size="sm" style={{ padding: '4px', marginLeft: '4px' }}>
+                  <Button size="small" style={{ padding: '4px', marginLeft: '4px' }}>
                     <PlayIcon />
                   </Button>
                 </div>
