@@ -2,14 +2,14 @@ import { Badge, Button, Tabs, Tooltip } from 'antd'
 import { App as Antd_App } from 'antd'
 import { antdApp } from './utils/antdApp'
 import Index from './pages/Index'
-import './App.css'
 import { useEffect, useState } from 'react'
 import { HomeOutlined } from '@ant-design/icons'
 import Chat from './pages/Chat'
 import { socket } from './socket'
 import ThinkWorld from './pages/ThinkWorld'
 import { LoginDialog } from './components/LoginDialog'
-const { TabPane: Tab } = Tabs
+import './App.css'
+
 function App() {
   antdApp.value = Antd_App.useApp()
   const [pathname, setPathname] = useState<any>('/chat')
@@ -38,13 +38,8 @@ function App() {
       label: "Code"
     },
     {
-      key: "/",
-      label: <Badge count="新" color="danger">
-        <div className="flex items-center space-x-1">
-          <HomeOutlined />
-          <span>主页</span>
-        </div>
-      </Badge>
+      key: "/think-world",
+      label: "概念世界"
     }
   ]
 
